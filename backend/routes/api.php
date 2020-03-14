@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //Rotas clientes - CRUD
+Route::resource('clientes', 'ClienteController');
 //Rotas produtos - CRUD
+
 //Rotas pedidos - CRUD
-
-
