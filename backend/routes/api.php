@@ -13,12 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 //Rotas clientes - CRUD
 Route::resource('clientes', 'ClienteController');
 //Rotas produtos - CRUD
-
+Route::resource('produtos', 'ProdutoController');
 //Rotas pedidos - CRUD
