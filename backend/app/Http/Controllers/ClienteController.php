@@ -16,8 +16,8 @@ class ClienteController extends Controller
     public function index()
     {
         //Buscando todos os clientes
-        $c = new clientes();
-        return response()->json($c::all());
+        $c = clientes::all();
+        return response()->json($c);
     }
 
     /**
@@ -45,6 +45,7 @@ class ClienteController extends Controller
         $c->sexo = $request->sexo;
         $c->email = $request->email;
         $c->save();
+        return response()->json($c);
     }
 
     /**
@@ -56,8 +57,8 @@ class ClienteController extends Controller
     public function show($id)
     {
         //Buscando cliente por id
-        $c = new clientes();
-        return response()->json($c::find($id));
+        $c = clientes::find($id);
+        return response()->json($c);
     }
 
     /**
@@ -80,7 +81,17 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Editando cliente
+        $c = clientes::find($id);
+        if(isset($c)){
+            $c->nome = $request->nome;
+            $c->cpf = $request->cpf;
+            $c->sexo = $request->sexo;
+            $c->email = $request->email;
+            $c->save();
+            return response()->json($c);
+        }
+        return response('Cliente não encontrado', 404);
     }
 
     /**
@@ -91,6 +102,12 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Apagar cliente
+        $c = clientes::find($id);
+        if(isset($c)){
+            $c->delete($id);
+            return response('OK', 200);
+        }
+        return response('Cliente não encontrado', 404);
     }
 }
