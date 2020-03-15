@@ -13,8 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-//Rotas clientes - CRUD
+//Aqui são as rotas de clientes - CRUD
 Route::resource('clientes', 'ClienteController');
-//Rotas produtos - CRUD
+//Aqui são as rotas de produtos - CRUD
 Route::resource('produtos', 'ProdutoController');
-//Rotas pedidos - CRUD
+//Aqui são as rotas de pedidos - CRUD
+Route::resource('pedidos', 'PedidosController');
