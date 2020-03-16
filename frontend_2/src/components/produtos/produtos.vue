@@ -26,7 +26,7 @@
         </b-form-group>
         <b-button @click="salvar()" block variant="outline-primary">Salvar</b-button>
       </b-col>
-      <b-col cols="9"> 
+      <b-col cols="9"> Mensagem: {{mensagem}}
            <table class="table">
             <thead>          
               <th scope="col">#</th>
@@ -67,6 +67,7 @@
     data() {
       return { 
         items: [],
+        mensagem: '',
         produtos: {
           nome: '',
           cor: '',
@@ -97,8 +98,9 @@
       excluir(id) {
         console.log(id);
         this.$http
-          .post("produtos/" + id, { _method: "delete" })
-          .then(res => console.log(res));
+          .post("produtos/" + id, { _method: "DELETE" })
+          .then(this.get())
+          .catch(() => alert( 'Produto cadastrado em pedido.'))
       },
       editar(id) {    
        
