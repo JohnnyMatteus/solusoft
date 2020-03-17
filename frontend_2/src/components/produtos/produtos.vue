@@ -62,7 +62,7 @@
 <script>
 
   export default {
-    props: ["cliente"],
+    
 
     data() {
       return { 
