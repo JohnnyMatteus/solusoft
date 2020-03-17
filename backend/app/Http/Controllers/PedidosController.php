@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\pedidos;
+use App\clientes;
 use App\itens_pedidos;
+use App\produto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use PDF;
+
 
 class PedidosController extends Controller
 {
@@ -140,5 +144,45 @@ class PedidosController extends Controller
             return response('OK', 200);
         }
         return response('Pedido não encontrado', 404);
+    }
+
+    public function report ($id) {
+        $data = array();
+        $soma = 0;
+        $p = pedidos::find($id);
+        if(isset($p)){
+            //Buscando pedidos
+            $data['pedido'] = $p;
+            //Buscando clientes
+            $data['cliente'] = clientes::find($p->cliente_id);
+            //Buscando item dos pedidos
+            $it = itens_pedidos::all();
+            //Buscando produtos
+            $prod = produto::all();
+
+            for ($i=0; $i < count($it); $i++) {
+                if($it[$i]->pedido_id == $p->id){
+                   $data['item'][$i] = $it[$i];
+
+                   for ($j=0; $j < count($prod); $j++) {
+                        if($prod[$j]->id == $it[$i]->produto_id){
+                        $data['produtos'][$j] = $prod[$j];
+                            $data['produtos'][$j]['valor_por_produto'] = $prod[$j]['valor'] * $it[$i]['quantidade'];
+                            $data['produtos'][$j]['quantidade'] = $it[$i]['quantidade'];
+                            $soma += $data['produtos'][$j]['valor_por_produto'];
+                        }
+                    }
+                }
+            }
+            $data['valor_total'] = $soma;
+            //return $data['produtos'];
+            $pdf = PDF::loadView('report', compact('data'));
+            return $pdf->download('report.pdf');
+
+
+        }
+
+
+
     }
 }
