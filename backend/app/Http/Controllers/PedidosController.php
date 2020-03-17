@@ -175,7 +175,7 @@ class PedidosController extends Controller
                 }
             }
             $data['valor_total'] = $soma;
-            //return $data['produtos'];
+            //Enviando dados para template
             $pdf = PDF::loadView('report', compact('data'));
             return $pdf->download('report.pdf');
 
