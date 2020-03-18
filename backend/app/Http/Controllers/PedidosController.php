@@ -193,7 +193,7 @@ class PedidosController extends Controller
         $data = array();
         $soma = 0;
         $p = pedidos::find($id);
-       
+
         if(isset($p)){
             //Buscando pedidos
             $data['pedido'] = $p;
@@ -219,9 +219,10 @@ class PedidosController extends Controller
                 }
             }
             $data['valor_total'] = $soma;
-
-            return Mail::to('jmatteus20@gmail.com', 'Johnny')
+            //Aqui enviamos o email
+            Mail::to($data['cliente']->email, $data['cliente']->nome)
                     ->send(new SendMail($data));
+                    return response('Email enviado com sucesso.', 200);
 
         }
 
