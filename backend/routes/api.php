@@ -20,3 +20,4 @@ Route::resource('produtos', 'ProdutoController');
 //Aqui são as rotas de pedidos - CRUD
 Route::resource('pedidos', 'PedidosController');
 Route::get('pedidos/{id}/report', 'PedidosController@report');
+Route::get('pedidos/{id}/sedmail', 'PedidosController@sedmail');
