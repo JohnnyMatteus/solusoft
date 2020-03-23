@@ -1,7 +1,7 @@
 [![Solusoft](https://www.elw.com.br/skin/frontend/solusoft/default/images/logo-sga-soft.jpg "Solusoft")](https://www.elw.com.br/skin/frontend/solusoft/default/images/logo-sga-soft.jpg "Solusoft")
 
-# Clientes
-##### Com os campos: código cliente, nome, cpf, sexo, email
+# Clientes - CRUD
+##### Campos bd: código cliente, nome, cpf, sexo, email
 
 - GET /clientes/
 - GET /clientes/1
@@ -9,8 +9,8 @@
 - PUT /clientes/1
 - DELETE /clientes/1
 
-# Produtos
-##### Com os campos: código produto, nome, cor, tamanho, valor
+# Produtos - CRUD
+##### Campos bd: código produto, nome, cor, tamanho, valor
 
 - GET /produtos/
 - GET /produtos/1
@@ -18,8 +18,8 @@
 - PUT /produtos/1
 - DELETE /produtos/1
 
-# Pedido
-##### Com os campos: código do pedido, data do pedido, observação, forma de pagamento (dinheiro, cartão, cheque).
+# Pedido - CRUD
+##### Campos bd: código do pedido, data do pedido, observação, forma de pagamento (dinheiro, cartão, cheque).
 
 - GET /pedidos/
 - GET /pedidos/1
