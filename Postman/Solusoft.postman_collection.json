@@ -1,0 +1,706 @@
+{
+	"id": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+	"name": "Solusoft",
+	"description": "Sistema de Avaliação 3.0 - API",
+	"order": [],
+	"folders": [
+		{
+			"name": "Clientes",
+			"description": "",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"order": [
+				"b5dd7850-52ce-85d3-5be1-49ba7201c4d7",
+				"f0573502-7575-8e24-3258-adbd57302aaf",
+				"22fdaf35-2a9d-f970-a5ae-f26b21012576",
+				"3511876d-778d-abf8-bedf-d492dcacd39e",
+				"8f816dba-9cac-bba0-8b87-642d9845ac26"
+			],
+			"owner": "557880",
+			"folders_order": [],
+			"id": "262d78c1-29d6-7b15-b30c-50aef98f6e22"
+		},
+		{
+			"name": "Pedidos",
+			"description": "",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"order": [
+				"eb9b4055-2d4d-af3e-f501-ff5eddb5dcf9",
+				"6e2c6890-e94b-1b61-86b9-13e4027b0eed",
+				"941bd292-17e4-428e-0f52-7a7e68c3164c",
+				"ae826abc-f457-ee21-9fb7-7319b4b02257",
+				"8dd93e1a-3b32-518c-f57b-25725b0527b7"
+			],
+			"owner": "557880",
+			"folders_order": [],
+			"id": "a2feb45c-3d5d-15c9-711c-c50087a53f1e"
+		},
+		{
+			"name": "Produtos",
+			"description": "",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"order": [
+				"5067c747-8346-4f41-efc7-c7cf2bdd3dc5",
+				"b5ae08f5-670d-d926-584b-ef609759f572",
+				"1400533c-aa3c-3175-f667-ae914b3d31eb",
+				"bea6b45c-31b6-5ccf-b33f-3c36151f1377",
+				"542d2b54-b75f-2d58-417d-5fb841336087"
+			],
+			"owner": "557880",
+			"folders_order": [],
+			"id": "cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a"
+		}
+	],
+	"folders_order": [
+		"262d78c1-29d6-7b15-b30c-50aef98f6e22",
+		"cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a",
+		"a2feb45c-3d5d-15c9-711c-c50087a53f1e"
+	],
+	"timestamp": 1584208674041,
+	"owner": "557880",
+	"public": false,
+	"requests": [
+		{
+			"id": "1400533c-aa3c-3175-f667-ae914b3d31eb",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/produtos",
+			"folder": "cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Smartphone Samsung M30",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cor",
+					"value": "Preto",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tamanho",
+					"value": "15cm",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "valor",
+					"value": "1450",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584212956268,
+			"name": "http://127.0.0.1:8000/api/produtos",
+			"description": "",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": []
+		},
+		{
+			"id": "22fdaf35-2a9d-f970-a5ae-f26b21012576",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/clientes",
+			"folder": "262d78c1-29d6-7b15-b30c-50aef98f6e22",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Johnny Matteus",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cpf",
+					"value": "015.511.852-85",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "Masculino",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "matteus.22@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584211028322,
+			"name": "http://127.0.0.1:8000/api/clientes",
+			"description": "Inserido client",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "22fdaf35-2a9d-f970-a5ae-f26b21012576"
+		},
+		{
+			"id": "3511876d-778d-abf8-bedf-d492dcacd39e",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/clientes/5",
+			"folder": "262d78c1-29d6-7b15-b30c-50aef98f6e22",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Johnny Matteus Santos",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cpf",
+					"value": "015.511.852-85",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "Masculino",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "matteus.22@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584211074906,
+			"name": "http://127.0.0.1:8000/api/clientes/1",
+			"description": "Inserido client",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": []
+		},
+		{
+			"id": "5067c747-8346-4f41-efc7-c7cf2bdd3dc5",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/produtos",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/produtos",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584212988100,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a"
+		},
+		{
+			"id": "542d2b54-b75f-2d58-417d-5fb841336087",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/produtos/4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/produtos/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584214325175,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a"
+		},
+		{
+			"id": "6e2c6890-e94b-1b61-86b9-13e4027b0eed",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/pedidos/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/pedidos/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584226836803,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "a2feb45c-3d5d-15c9-711c-c50087a53f1e"
+		},
+		{
+			"id": "8dd93e1a-3b32-518c-f57b-25725b0527b7",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/pedidos/25/sendmail",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/pedidos/25/sendmail",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584926128079,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "a2feb45c-3d5d-15c9-711c-c50087a53f1e"
+		},
+		{
+			"id": "8f816dba-9cac-bba0-8b87-642d9845ac26",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/clientes/5",
+			"folder": "262d78c1-29d6-7b15-b30c-50aef98f6e22",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Johnny Santos",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cpf",
+					"value": "015.511.852-85",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "Masculino",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "matteus.22@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584211107705,
+			"name": "http://127.0.0.1:8000/api/clientes/1",
+			"description": "Inserido client",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": []
+		},
+		{
+			"id": "941bd292-17e4-428e-0f52-7a7e68c3164c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/pedidos/1",
+			"folder": "a2feb45c-3d5d-15c9-711c-c50087a53f1e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "data",
+					"value": "2020-03-14",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "observacao",
+					"value": "Primeiro pedido",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "forma_pagamento",
+					"value": "Dinheiro",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "cliente_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "produto[0][id]",
+					"value": "5",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "produto[0][quantidade]",
+					"value": "20",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "produto[1][id]",
+					"value": "5",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "produto[1][quantidade]",
+					"value": "25",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584226805215,
+			"name": "http://127.0.0.1:8000/api/pedidos",
+			"description": "",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": []
+		},
+		{
+			"id": "ae826abc-f457-ee21-9fb7-7319b4b02257",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/pedidos/21/report",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/pedidos/21/report",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584926034814,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "a2feb45c-3d5d-15c9-711c-c50087a53f1e"
+		},
+		{
+			"id": "b5ae08f5-670d-d926-584b-ef609759f572",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/produtos/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/produtos/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584213071691,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a"
+		},
+		{
+			"id": "b5dd7850-52ce-85d3-5be1-49ba7201c4d7",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/clientes",
+			"folder": "262d78c1-29d6-7b15-b30c-50aef98f6e22",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Johnny Santos",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cpf",
+					"value": "015.511.852-85",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "Masculino",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "matteus.22@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584212554024,
+			"name": "http://127.0.0.1:8000/api/clientes",
+			"description": "Inserido client",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": []
+		},
+		{
+			"id": "bea6b45c-31b6-5ccf-b33f-3c36151f1377",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/produtos/4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Smartphone Samsung M30",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cor",
+					"value": "Preto",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tamanho",
+					"value": "20cm",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "valor",
+					"value": "1750",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://127.0.0.1:8000/api/produtos/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584214239094,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cd6c7b6c-2b20-ef96-457c-a5f8f2838d3a"
+		},
+		{
+			"id": "eb9b4055-2d4d-af3e-f501-ff5eddb5dcf9",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/pedidos",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://127.0.0.1:8000/api/pedidos",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584216476066,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "a2feb45c-3d5d-15c9-711c-c50087a53f1e"
+		},
+		{
+			"id": "f0573502-7575-8e24-3258-adbd57302aaf",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/clientes/1",
+			"folder": "262d78c1-29d6-7b15-b30c-50aef98f6e22",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "nome",
+					"value": "Johnny Santos",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cpf",
+					"value": "015.511.852-85",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sexo",
+					"value": "Masculino",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "matteus.22@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584210975049,
+			"name": "http://127.0.0.1:8000/api/clientes/1",
+			"description": "Inserido client",
+			"collectionId": "b9afb0a6-867d-bfe3-f6c7-9a3b7b2633c0",
+			"responses": []
+		}
+	]
+}
