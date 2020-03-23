@@ -49,21 +49,22 @@ class PedidosController extends Controller
         $p = new pedidos();
         $i = new itens_pedidos();
 
-        $p->data = $request->data;
+        $p->data = date('Y-m-d', strtotime(str_replace('/', '-', $request->data)));
         $p->observacao = $request->observacao;
         $p->forma_pagamento = $request->forma_pagamento;
-        $p->cliente_id = $request->cliente_id;
+        $p->cliente_id = $request->cliente;
         $p->save();
 
-        foreach ($request->produto as $item) {
+        $arr = json_decode($request->pedidos, true );
 
-            $i::create([
-                'pedido_id' =>  $p->id,
-                'produto_id' => $item['id'],
-                'quantidade' => $item['quantidade']
-            ]);
+        foreach ($arr as $key => $value) {
+            $i->pedido_id =  $p->id;
+            $i->produto_id = $key;
+            $i->quantidade = $value;
+            $i->save();
         }
-        return response()->json($p);
+
+        return response()->json(true);
     }
 
     /**
@@ -188,7 +189,7 @@ class PedidosController extends Controller
 
     }
 
-    public function sedmail ($id) {
+    public function sendmail ($id) {
 
         $data = array();
         $soma = 0;

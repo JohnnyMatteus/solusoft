@@ -5,6 +5,7 @@ import Home from './components/Home'
 import clientes from './components/clientes/clientes'
 import produtos from './components/produtos/produtos'
 import pedidos from './components/pedidos/pedidos'
+import cadastro from './components/pedidos/cadastro'
 import relatorios from './components/relatorios/relatorios'
 
 
@@ -18,6 +19,7 @@ export default new Router({
         { path: '/clientes', component: clientes },
         { path: '/produtos', component: produtos },
         { path: '/pedidos', component: pedidos },
-        { path: '/relatorios', component: relatorios }
+        { path: '/relatorios', component: relatorios },
+        { path: '/pedido/cadastro', component: cadastro }
     ]
 })

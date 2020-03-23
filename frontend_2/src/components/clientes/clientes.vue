@@ -95,7 +95,7 @@
         (this.clientes.id = null);
       },
       excluir(id) {
-        console.log(id);
+        
         this.$http
           .post("clientes/" + id, { _method: "delete" })
           .then(res => console.log(res));

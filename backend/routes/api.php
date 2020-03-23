@@ -19,5 +19,7 @@ Route::resource('clientes', 'ClienteController');
 Route::resource('produtos', 'ProdutoController');
 //Aqui são as rotas de pedidos - CRUD
 Route::resource('pedidos', 'PedidosController');
+//Aqui é a rota responsavel por downlaod de relatorios
 Route::get('pedidos/{id}/report', 'PedidosController@report');
-Route::get('pedidos/{id}/sedmail', 'PedidosController@sedmail');
+//Aqui é a rota responsavel por envio de e-mails
+Route::get('pedidos/{id}/sendmail', 'PedidosController@sendmail');

@@ -3,11 +3,14 @@
   <b-container>
   <h1>Pedidos</h1>
     <b-row >
+      <b-col cols="3" >
+        <a href="/pedido/cadastro" class="outline-warning py-1 px-md-2">Novo Pedido </a>
+
+      </b-col>
      
       <b-col cols="9"> 
            <table class="table">
             <thead>          
-              <th scope="col">#</th>
               <th scope="col">Data</th>
               <th scope="col">Observacao</th>
               <th scope="col">Forma de pagamento</th>
@@ -16,13 +19,15 @@
             </thead>
             <tbody>
             <tr v-for="item in items" :key="item.id">
-              <td>{{item.id}}</td>
               <td>{{item.data}}</td>
               <td>{{item.observacao}}</td>
               <td>{{item.forma_pagamento}}</td>
               <td>{{item.cliente_id}}</td>
-              <td><b-button variant="outline-danger py-1 px-md-2" @click="excluir(item.id)">excluir</b-button></td>
-              <td><b-button variant="outline-warning py-1 px-md-2" @click="editar(item.id)">editar</b-button></td>
+              <td><b-button variant="outline-danger py-1 px-md-2" @click="excluir(item.id)"><b-icon icon="x"></b-icon></b-button>
+              <b-button variant="outline-warning py-1 px-md-2" @click="editar(item.id)"><b-icon icon="pen"></b-icon></b-button>
+              <b-button variant="outline-primary py-1 px-md-2" @click="report(item.id)"><b-icon icon="download"></b-icon></b-button>
+              <b-button variant="outline-success py-1 px-md-2" @click="send(item.id)"><b-icon icon="envelope"></b-icon></b-button>
+              </td>
             </tr>
             </tbody>
           </table>          
@@ -45,14 +50,7 @@
     data() {
       return { 
         items: [],
-        mensagem: '',
-       /* pedidos: {
-          data: '',
-          observacao: '',
-          forma_pagamento: '',
-          cliente_id: '',
-          id: null
-        }*/
+        mensagem: ''
       }
     },
     methods: {
@@ -89,7 +87,25 @@
             this.pedidos = element;
           }
         }
-      }    
+      }, 
+      report(id) {
+        var myHeaders = new Headers();
+
+        myHeaders.append('Content-Type', 'multipart/form-data');
+        this.$http.get(`pedidos/${id}/report`, myHeaders).then(response => {
+          var blob = new Blob([response.data], {
+          type: 'application/pdf'
+        });
+        var url = window.URL.createObjectURL(blob)
+        window.open(url);
+            })
+        .catch(error => {
+            console.log(error);
+        });   
+      },
+      send(id) {
+        this.$http.get(`pedidos/${id}/sendmail`,{}).then(res => console.log(res));
+      }   
     },   
     created() {
       this.$http.get('pedidos',{}).then(res => 
