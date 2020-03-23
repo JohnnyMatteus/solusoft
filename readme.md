@@ -61,6 +61,12 @@
 - Mysql 5.0.12``
 - Apache/2.4.37 (Win32) OpenSSL/1.0.2p 
 
+## Frameworks utilizados
+ - Laravel - 5.8
+    - barryvdh/laravel-dompdf - "0.8.6"
+ - Vue - 2.6
+    - Axios
+    - BootstrapVue
 
 
 
